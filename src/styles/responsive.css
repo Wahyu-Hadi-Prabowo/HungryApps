@@ -1,0 +1,74 @@
+@media (max-width: 900px) {
+    .menu-list {
+        margin: 24px 0;
+        font-size: 20px;
+    }
+    .item {
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 0 40px;
+    }
+    .menu-list {
+        background-color: sandybrown;
+        border-radius: 20px 0px 0px 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 40%;
+        margin-top: 0;
+        padding: 60px 46px;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+    }
+    .menu-list li {
+        padding: 10px 0;
+    }
+    .menu-list a {
+        font-size: 20px;
+        color: wheat;
+    }
+
+    .open .menu-list {
+        transform: translateX(0);
+    }
+    .menu-key {
+        margin: auto 0;
+        width: 46px;
+        height: 46px;
+        border: 0;
+        border-radius: 3px;
+        color: wheat;
+        font-size: 30px;
+        display: block;
+        z-index: 2;
+        cursor: pointer;
+    }
+ 
+    .menu i.fa-greater-than,
+    .menu.open i.fa-book-open {
+        display: none;
+        animation: enter 0.8s;
+    }
+    .menu.open i.fa-greater-than,
+    .menu i.fa-book-open {
+        display: block;
+        animation: enter 0.8s;
+    }
+    .menu-list a:hover{
+        transition-duration: 0.2s;
+        color: #C36A2D;
+    }
+    .item {
+        width: 100%;
+    }
+    .detail, restaurant-review {
+        width: 100%;
+    }
+}
